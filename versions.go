@@ -18,14 +18,14 @@ func IsVersion(ver string) bool {
 	return matchRegex(ver)
 }
 
-func IsVersionAndParse(ver string) (bool, Version) {
+func IsVersionAndParse(ver string) (Version, bool) {
 	if matchRegex(ver) {
-		return true, Version(ver)
+		return Version(ver), true
 	}
-	return false, ""
+	return "", false
 }
 
-func (v Version) toString() string {
+func (v Version) ToString() string {
 	return string(v)
 }
 
