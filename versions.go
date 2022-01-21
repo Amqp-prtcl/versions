@@ -31,7 +31,7 @@ func IsVersionAndParse(ver string) (Version, bool) {
 	return "", false
 }
 
-func (v Version) ToString() string {
+func (v Version) String() string {
 	return string(v)
 }
 
